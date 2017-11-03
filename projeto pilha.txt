@@ -1,0 +1,45 @@
+Filas
+Implemente uma classe de pilha de inteiros que possui os métodos
+push?, pop? e min?, onde min? retorna o menor inteiro na pilha e todos? os
+métodos são executados em O(1).
+Submissão:
+- Link com acesso para código no repositório git ou equivalente
+- Arquivo no repositório explicando em palavras como a estrutura
+funciona e porque todos os métodos executados rodam em O(1).
+
+
+Uma pilha de inteiros funciona da seguinte forma:
+O ultimo inteiro que entra é o primeiro que sai(mais conhecido como LIFO).
+
+Na classe Pilha() foi criado os métodos push, pop, min, isEmpty e isFull, além de um construtor.
+
+public Pilha(): esse construtor só tem o trabalho de criar um vetor de inteiros e inserir o valor -1 na variavel inicio.
+
+push(): a primeira verificação que o metodo faz é testar se o vetor já está cheio, caso sim ele devolve uma exception informando que a pilha está cheia.
+caso não ele acrescenta um na variavel inicio para ela valer 0 e depois o vetor na posição inicio recebe um inteiro "e";
+
+pop(): verifica se está vazio, caso sim uma exception é lançada com a mensagem de que a pilha está vazia.
+caso não um inteiro "e" recebe o vetor na possição inicio e faz o decremento da variavel inicio.
+
+isEmpty(): verifica se o valor que está em "inicio" é -1 e caso o retorno seja true o vetor estará vazio.
+
+isFull(): verifica se o valor de "inicio" é igual o comprimento do vetor -1 e caso seja retorna true o que significa que o vetor está cheio.
+
+min(): a variavel "menor" recebe o maior inteiro possível. É criado o laço com o numero de repetiçoes  igual ao tamanho do length do vetor, faz a verificação se 
+o valor que está em "vetor[incio]" é menor que o valor que está em "menor", caso seja "menor" receberá o valor do vetor.
+Após o final do laço será retornado o valor de "menor" com o comando "return menor".
+
+****************************************************************
+TestaPilha(): nessa classe está o "main".
+É instaciado a classe Pilha() e a classe Scanner para fazer captura do teclado.
+
+No primeiro While é recebido o valor que é digitado, realizado algumas verificações e utilizado o metodo push.
+No segundo While é perguntado se quer realizar a exclusão de algum valor e é utilizado o metodo pop.
+Por fim é feito um IF para saber se o vetor está preenchido e se estiver é retornado o menor valor que nele está.
+
+O que pode ser melhorado?
+
+- Criar exceptions para valores não inteiros
+
+- Criar laços para obrigar a ser preenchido o vetor totalmente, pois por padrão o vetor já está com todas as posições valendo 0.
+
